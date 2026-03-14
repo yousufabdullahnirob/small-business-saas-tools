@@ -1,0 +1,93 @@
+:root {
+  /* Ultra Modern Neon Palette - Refined */
+
+  /* Primary - Electric Violet / Deep Purple */
+  --primary-h: 255;
+  --primary-s: 95%;
+  --primary-l: 64%;
+  --primary: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+
+  /* A rich, glowing gradient - More vibrant */
+  --primary-gradient: linear-gradient(135deg, hsl(260, 100%, 65%), hsl(230, 100%, 60%));
+
+  /* Secondary / Accent - Hot Pink / Cyberpunk Red */
+  --accent-h: 330;
+  --accent-s: 100%;
+  --accent-l: 60%;
+  --accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --accent-gradient: linear-gradient(135deg, hsl(330, 100%, 55%), hsl(290, 100%, 60%));
+
+  /* Backgrounds - Cleaner, less muddy */
+  --bg-h: 225;
+  --bg-s: 35%;
+  --bg-l: 97%;
+  --bg: hsl(var(--bg-h), var(--bg-s), var(--bg-l));
+
+  /* Glassmorphism Surface - Frosted */
+  --surface-h: 0;
+  --surface-s: 0%;
+  --surface-l: 100%;
+  --surface: rgba(255, 255, 255, 0.75);
+  /* Increased opacity for better readability */
+  --surface-solid: #ffffff;
+
+  --glass-border: rgba(255, 255, 255, 0.8);
+  --glass-shadow:
+    0 10px 40px -10px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  --backdrop-blur: 20px;
+
+  /* Text Colors */
+  --text-main: hsl(230, 40%, 12%);
+  --text-primary-dark: hsl(230, 40%, 8%);
+  --text-secondary: hsl(230, 15%, 45%);
+  --text-light: hsl(230, 10%, 75%);
+
+  /* Status Colors */
+  --success: hsl(150, 90%, 35%);
+  --success-bg: hsl(150, 80%, 96%);
+  --warning: hsl(40, 95%, 50%);
+  --warning-bg: hsl(40, 95%, 96%);
+  --danger: hsl(350, 90%, 60%);
+  --danger-bg: hsl(350, 90%, 96%);
+
+  /* Borders & Glows */
+  --border: rgba(0, 0, 0, 0.05);
+  /* Softer border */
+  --border-focus: var(--primary);
+
+  /* Shadows - More natural depth */
+  --shadow-sm: 0 2px 8px -2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 12px 24px -6px rgba(0, 0, 0, 0.08), 0 4px 8px -4px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 24px 48px -12px rgba(50, 50, 93, 0.15), 0 12px 24px -8px rgba(0, 0, 0, 0.08);
+
+  /* Neon Glows */
+  --glow-primary: 0 0 25px rgba(124, 58, 237, 0.5);
+  --glow-accent: 0 0 25px rgba(236, 72, 153, 0.5);
+  --shadow-glow: 0 8px 30px rgba(124, 58, 237, 0.3);
+
+  /* Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-slow: 700ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark {
+  --bg: hsl(230, 30%, 8%);
+  --surface: rgba(17, 24, 39, 0.75);
+  --surface-solid: hsl(220, 30%, 12%);
+  --text-main: hsl(220, 20%, 98%);
+  --text-secondary: hsl(220, 15%, 70%);
+  --border: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+}

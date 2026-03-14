@@ -1,0 +1,5 @@
+Checking for duplicate emails (case-insensitive)...
+Found 1 duplicate email groups:
+ - yousufabdullahn@gmail.com: 2 users
+   ID: 6, Username: Nirob, Email: yousufabdullahn@gmail.com, Date Joined: 2025-12-19 09:01:15.315304+00:00
+   ID: 7, Username: Yousuf, Email: yousufabdullahn@gmail.com, Date Joined: 2025-12-25 07:19:59.534672+00:00

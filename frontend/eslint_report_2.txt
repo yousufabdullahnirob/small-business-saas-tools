@@ -1,0 +1,130 @@
+
+E:\Small Business SaaS Tools\frontend\src\context\AuthContext.jsx
+  58:9   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  56 |
+  57 |     useEffect(() => {
+> 58 |         checkUser();
+     |         ^^^^^^^^^ Avoid calling setState() directly within an effect
+  59 |     }, [checkUser]);
+  60 |
+  61 |     return (  react-hooks/set-state-in-effect
+  68:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         react-refresh/only-export-components
+
+E:\Small Business SaaS Tools\frontend\src\context\ToastContext.jsx
+  7:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+E:\Small Business SaaS Tools\frontend\src\pages\Customers.jsx
+  14:9  error  Error: Cannot access variable before it is declared
+
+`fetchCustomers` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+  12 |
+  13 |     useEffect(() => {
+> 14 |         fetchCustomers();
+     |         ^^^^^^^^^^^^^^ `fetchCustomers` accessed before it is declared
+  15 |     }, []);
+  16 |
+  17 |     async function fetchCustomers() {
+
+  15 |     }, []);
+  16 |
+> 17 |     async function fetchCustomers() {
+     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 18 |         try {
+     | ^^^^^^^^^^^^^
+> 19 |             const response = await api.get('customers/customers/');
+     | ^^^^^^^^^^^^^
+> 20 |             setCustomers(response.data);
+     | ^^^^^^^^^^^^^
+> 21 |         } catch (error) {
+     | ^^^^^^^^^^^^^
+> 22 |             console.error("Error fetching customers", error);
+     | ^^^^^^^^^^^^^
+> 23 |         }
+     | ^^^^^^^^^^^^^
+> 24 |     }
+     | ^^^^^^ `fetchCustomers` is declared here
+  25 |
+  26 |     const handleSubmit = async (e) => {
+  27 |         e.preventDefault();  react-hooks/immutability
+
+E:\Small Business SaaS Tools\frontend\src\pages\Expenses.jsx
+  20:31  error  'useCallback' is not defined                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  no-undef
+  27:29  error  'useCallback' is not defined                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  no-undef
+  35:9   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  33 |
+  34 |     useEffect(() => {
+> 35 |         fetchTransactions();
+     |         ^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  36 |         fetchCategories();
+  37 |     }, [fetchTransactions, fetchCategories]);
+  38 |  react-hooks/set-state-in-effect
+
+E:\Small Business SaaS Tools\frontend\src\pages\POS.jsx
+  19:9  error  Error: Cannot access variable before it is declared
+
+`fetchProducts` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+  17 |
+  18 |     useEffect(() => {
+> 19 |         fetchProducts();
+     |         ^^^^^^^^^^^^^ `fetchProducts` accessed before it is declared
+  20 |     }, []);
+  21 |
+  22 |     const fetchProducts = async () => {
+
+  20 |     }, []);
+  21 |
+> 22 |     const fetchProducts = async () => {
+     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 23 |         try {
+     | ^^^^^^^^^^^^^
+> 24 |             const response = await api.get('inventory/products/');
+     | ^^^^^^^^^^^^^
+> 25 |             setProducts(response.data);
+     | ^^^^^^^^^^^^^
+> 26 |         } catch (_error) {
+     | ^^^^^^^^^^^^^
+> 27 |             console.error("Error fetching products", _error);
+     | ^^^^^^^^^^^^^
+> 28 |         }
+     | ^^^^^^^^^^^^^
+> 29 |     };
+     | ^^^^^^^ `fetchProducts` is declared here
+  30 |
+  31 |     const addToCart = (product) => {
+  32 |         if (product.stock_quantity <= 0) {  react-hooks/immutability
+
+E:\Small Business SaaS Tools\frontend\src\pages\Reports.jsx
+  38:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  36 |     useEffect(() => {
+  37 |         // In a real app, this would be a dedicated report endpoint
+> 38 |         fetchSummary();
+     |         ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  39 |     }, [fetchSummary]);
+  40 |
+  41 |     if (!summary) return <div>Loading reports...</div>;  react-hooks/set-state-in-effect
+
+Γ£û 9 problems (7 errors, 2 warnings)
+

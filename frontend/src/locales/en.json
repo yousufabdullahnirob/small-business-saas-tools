@@ -1,0 +1,81 @@
+{
+    "common": {
+        "upgrade": "Upgrade",
+        "dashboard": "Dashboard",
+        "pos_billing": "POS & Billing",
+        "sales_history": "Sales History",
+        "inventory": "Inventory",
+        "expenses": "Expenses",
+        "marketing": "AI Marketing",
+        "customers": "Customers",
+        "reports": "Reports",
+        "billing_plans": "Billing & Plans",
+        "settings": "Settings",
+        "logout": "Logout",
+        "profile": "Profile"
+    },
+    "pricing": {
+        "title": "Pricing & Plans",
+        "subtitle": "Choose the best plan for your business growth.",
+        "new_year_offer": "Happy New Year 2026",
+        "offer_text": "26% OFF on All Plans!",
+        "offer_subtext": "This offer is valid from 1-7 January.",
+        "get_now": "Get it Now",
+        "days": "Day",
+        "hours": "Hour",
+        "mins": "Min",
+        "secs": "Sec",
+        "off_tag": "26% OFF",
+        "free_trial": "14 Days Free Trial",
+        "see_all_features": "See all features",
+        "save": "Save",
+        "plans": {
+            "month_1": "1 Month Plan",
+            "month_3": "3 Month Plan",
+            "month_6": "6 Month Plan",
+            "month_12": "12 Month Plan"
+        },
+        "lakkhyo": {
+            "title": "Lakkhyo Plan",
+            "desc": "Start your small business with high potential from here.",
+            "feature1": "5 Team Members",
+            "feature2": "1 Warehouse",
+            "feature3": "1,500 Invoices per month",
+            "feature4": "Unlimited Products",
+            "feature5": "API Access for 1 Domain",
+            "feature6": "3 Addons Integration",
+            "feature7": "3 Years Order History",
+            "feature8": "3 Years Reporting History",
+            "feature9": "White Label",
+            "feature10": "Storefront"
+        },
+        "growth": {
+            "title": "Growth Plan",
+            "desc": "Increase your business profit with this package.",
+            "feature1": "10 Team Members",
+            "feature2": "3 Warehouses",
+            "feature3": "3,000 Invoices per month",
+            "feature4": "Unlimited Products",
+            "feature5": "API Access for 5 Domains",
+            "feature6": "5 Addons Integration",
+            "feature7": "5 Years Order History",
+            "feature8": "5 Years Reporting History",
+            "feature9": "White Label",
+            "feature10": "Storefront"
+        },
+        "empire": {
+            "title": "Empire Plan",
+            "desc": "Want to run a big business smartly? This plan is enough for you.",
+            "feature1": "15 Team Members",
+            "feature2": "5 Warehouses",
+            "feature3": "6,000 Invoices per month",
+            "feature4": "Unlimited Products",
+            "feature5": "API Access for 9 Domains",
+            "feature6": "10 Addons Integration",
+            "feature7": "Unlimited Order History",
+            "feature8": "Unlimited Reporting History",
+            "feature9": "White Label",
+            "feature10": "Storefront"
+        }
+    }
+}
